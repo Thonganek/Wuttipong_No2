@@ -821,6 +821,7 @@ body.modal-open { overflow: hidden; }
   html { scroll-padding-top: 16px; }
   body { padding-bottom: 84px; }
   .hero { padding-top: 32px; }
+  .hero-scroll { display: none; }
   .mobile-dock {
     position: fixed; left: 0; right: 0; bottom: calc(10px + env(safe-area-inset-bottom)); z-index: 90;
     width: calc(100% - 20px); max-width: 560px; margin: 0 auto;
@@ -866,7 +867,20 @@ body.modal-open { overflow: hidden; }
   .brand-text { font-size: 16px; }
   .brand-text small { font-size: 12px; }
   .hero { padding-top: 26px; }
-  .hero-stage { max-width: 380px; }
+  .hero-stage { max-width: 330px; }
+  /* phones: name right under the portrait so it is on the first screen */
+  .hero-name { order: 1; margin-top: 2px; }
+  .hero-call { order: 2; justify-content: center; }
+  .hero-date { order: 3; margin-top: 16px; }
+  .hero-coop { order: 4; }
+  .hero-role { order: 5; }
+  .hero-tags { order: 6; }
+  .hero-actions { order: 7; }
+  .hero-countdown { order: 8; }
+  .section { padding-block: 56px; }
+  .section-head { margin-bottom: 30px; }
+  .backdrop-rays { display: none; }
+  .blob { animation: none; filter: blur(48px); }
   .number-card { right: 0; top: 36%; width: 112px; }
   .float-chip { padding: 8px 12px; }
   .float-chip small { font-size: 12px; }
@@ -901,11 +915,11 @@ body.modal-open { overflow: hidden; }
   .gallery-filters::-webkit-scrollbar { display: none; }
   .gallery-filters button { flex: none; }
   .exp-row, .skill-grid { grid-template-columns: 1fr; }
-  .vision-grid { grid-template-columns: 1fr 1fr; gap: 12px; }
-  .vision-tile { padding: 18px 16px 20px; }
-  .vision-tile > span { font-size: 32px; }
-  .vision-tile h3 { font-size: 17.5px; }
-  .vision-tile p { font-size: 15px; }
+  .vision-grid { grid-template-columns: 1fr; gap: 10px; }
+  .vision-tile { display: grid; grid-template-columns: 48px 1fr; column-gap: 14px; padding: 16px 18px; }
+  .vision-tile > span { grid-row: 1 / span 2; font-size: 32px; }
+  .vision-tile h3 { margin-top: 2px; font-size: 18px; }
+  .vision-tile p { grid-column: 2; margin-top: 2px; font-size: 15.5px; }
   .about-quote { padding: 18px 20px 18px 56px; }
   .about-quote::before { font-size: 72px; left: 14px; }
   .letter-paper p:not(.kicker):not(.letter-salute) { font-size: 17px; }
@@ -922,7 +936,6 @@ body.modal-open { overflow: hidden; }
   .cursor-glow { display: none; }
 }
 @media (max-width: 400px) {
-  .vision-grid { grid-template-columns: 1fr; }
   .pill-navy { font-size: 16px; padding: 4px 16px; }
 }
 
