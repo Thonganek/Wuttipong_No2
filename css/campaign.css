@@ -508,10 +508,11 @@ b, strong { font-weight: 700; }
 .date-info p { margin-top: 2px; color: var(--ink-2); font-size: 16.5px; line-height: 1.6; }
 .date-info p b { color: var(--navy-900); }
 .zone-card {
-  position: relative; display: grid; grid-template-columns: 150px 1fr; overflow: hidden; border-radius: var(--r);
+  position: relative; display: grid; grid-template-columns: 46% 1fr; overflow: hidden; border-radius: var(--r);
   background: var(--navy-bar); color: #fff; box-shadow: var(--shadow);
 }
-.zone-card img { width: 100%; height: 100%; object-fit: cover; object-position: center 30%; }
+.zone-photo { overflow: hidden; }
+.zone-card img { width: 100%; height: 100%; min-height: 300px; object-fit: cover; object-position: 50% 78%; transform: scale(1.2); transform-origin: 50% 74%; }
 .zone-body { padding: 20px 22px; }
 .zone-title { display: flex; align-items: center; gap: 8px; font-family: var(--font-display); font-weight: 700; font-size: 19px; color: var(--gold-300); }
 .zone-desc { margin-top: 6px; font-size: 15.5px; line-height: 1.65; color: rgba(255, 255, 255, .9); }
@@ -848,7 +849,9 @@ body.modal-open { overflow: hidden; }
   .brand-text small { font-size: 12px; }
   .share-button span { display: none; }
   .share-button { width: 44px; padding: 0; justify-content: center; }
-  .hero { padding-top: calc(var(--header-h) + 26px); }
+  .header { display: none; }
+  html { scroll-padding-top: 16px; }
+  .hero { padding-top: 26px; }
   .hero-stage { max-width: 380px; }
   .number-card { right: 0; top: 36%; width: 112px; }
   .float-chip { padding: 8px 12px; }
@@ -865,7 +868,7 @@ body.modal-open { overflow: hidden; }
   .date-block { width: 84px; }
   .date-day { font-size: 42px; }
   .zone-card { grid-template-columns: 1fr; }
-  .zone-card img { height: 200px; }
+  .zone-card img { height: auto; min-height: 0; aspect-ratio: 10 / 9; object-position: 50% 100%; transform: none; }
   .policy { grid-template-columns: auto 1fr; grid-template-areas: "icon value" "text text"; gap: 14px 12px; padding: 20px 18px 22px 24px; border-radius: 24px; }
   .policy-icon { grid-area: icon; width: 68px; height: 68px; font-size: 36px; border-radius: 20px; }
   .policy-num { position: absolute; left: 74px; top: 12px; width: 34px; height: 34px; font-size: 19px; box-shadow: 0 0 0 2px #fff, 0 0 0 4px var(--gold-500); z-index: 3; }
@@ -904,14 +907,22 @@ body.modal-open { overflow: hidden; }
   .footer { flex-direction: column; text-align: center; padding-bottom: 30px; }
   .mobile-dock {
     position: fixed; left: 10px; right: 10px; bottom: calc(10px + env(safe-area-inset-bottom)); z-index: 90;
-    display: grid; grid-template-columns: 1fr 1.2fr 1fr; align-items: center; gap: 6px; padding: 6px; border-radius: 22px;
+    display: grid; grid-template-columns: 1fr 2.6fr 1fr; align-items: center; gap: 6px; padding: 6px; border-radius: 22px;
     background: rgba(255, 255, 255, .86); border: 1px solid #fff; box-shadow: 0 16px 40px -14px rgba(15, 61, 179, .5);
     -webkit-backdrop-filter: blur(18px); backdrop-filter: blur(18px);
   }
-  .mobile-dock a, .mobile-dock button { display: flex; align-items: center; justify-content: center; gap: 6px; min-height: 50px; border-radius: 16px; font-weight: 600; font-size: 15px; color: var(--navy-900); }
-  .mobile-dock svg { color: var(--blue-600); font-size: 19px; }
+  .mobile-dock a, .mobile-dock button { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; min-height: 56px; border-radius: 16px; font-weight: 600; font-size: 12.5px; line-height: 1.3; color: var(--navy-900); }
+  .mobile-dock svg { color: var(--blue-600); font-size: 21px; }
   .mobile-dock .dock-main { color: #fff; background: var(--royal); box-shadow: 0 10px 20px -10px rgba(22, 82, 224, .9); }
-  .mobile-dock .dock-main b { font-family: var(--font-display); font-weight: 900; font-size: 24px; line-height: 1; color: #fff; }
+  .mobile-dock .dock-main { flex-direction: row; justify-content: flex-start; gap: 9px; padding: 0 10px; }
+  .dock-badge {
+    flex: none; width: 38px; height: 38px; display: grid; place-items: center; border-radius: 12px; background: #fff;
+    box-shadow: 0 0 0 2px var(--gold-500); font-family: var(--font-display); font-weight: 900; font-size: 26px; line-height: 1;
+    color: var(--red-500); text-shadow: 0 2px 0 var(--navy-900);
+  }
+  .dock-name { display: flex; flex-direction: column; min-width: 0; text-align: left; line-height: 1.3; }
+  .dock-name b { font-family: var(--font-display); font-weight: 700; font-size: 15.5px; color: #fff; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .dock-name small { font-size: 12px; font-weight: 500; color: var(--gold-200); white-space: nowrap; }
   .cursor-glow { display: none; }
 }
 @media (max-width: 400px) {
