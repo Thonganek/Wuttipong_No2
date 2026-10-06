@@ -38,14 +38,14 @@
 
 | ไฟล์ในเว็บ (`assets/photos/`) | ไฟล์ต้นฉบับ | ใช้ในส่วน |
 |---|---|---|
-| `01-office-wai.jpg` | `7400898_0.jpg` (ตัดแถบปุ่มโทรศัพท์ด้านล่างออก) | แกลเลอรี |
+| `01-office-wai.jpg` | `7400898_0.jpg` (ตัดแถบปุ่มโทรศัพท์ด้านล่างออก) | ภาพหลัก (`hero-cutout.webp` ตัดพื้นหลัง), แกลเลอรี |
 | `02-ceremony-wai.jpg` | `7429482.jpg` | จดหมายถึงสมาชิก, แกลเลอรี |
 | `03-workplace-portrait.jpg` | `7448149.jpg` | แกลเลอรี |
 | `04-heart-sofa.jpg` | `7456739.jpg` | แกลเลอรี |
 | `05-garland-heart.jpg` | `7475755.jpg` | ส่วนปิดท้าย, แกลเลอรี |
 | `06-coop-office-front.jpg` | `7494520_0.jpg` | เขตพื้นที่เลือกตั้ง, แกลเลอรี |
 | `07-coop-office-standing.jpg` | `7494523_0.jpg` | แกลเลอรี |
-| `08-studio-portrait.jpg` | `IMG_0513_0.jpg` | ภาพหลัก (`hero-cutout.webp` ตัดพื้นหลัง), แกลเลอรี |
+| `08-studio-portrait.jpg` | `IMG_0513_0.jpg` | แกลเลอรี |
 | `09-studio-arms-crossed.jpg` | `IMG_0517_0.jpg` | รู้จักผู้สมัคร, แกลเลอรี |
 | `10-poster-policies.jpg` | `LINE_ALBUM_หาเสียง69_261005_1.jpg` | แกลเลอรี, ภาพตัวอย่างเมื่อแชร์ลิงก์ |
 | `11-poster-letter.jpg` | `LINE_ALBUM_หาเสียง69_261005_2.jpg` | แกลเลอรี |
